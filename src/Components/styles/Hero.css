@@ -1,0 +1,127 @@
+.heroSection{
+    /* position: relative; */
+    padding-top: 30px;
+    height: 100vh;
+    background-color: none;
+}
+
+.hero-name-holder > *{
+    width: 100%;
+}
+
+[data-hero-heading]{
+    font: var(--HeadingText);
+    font-size: 10vw;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 1.5vw ;
+    color: var(--txt-l-color);
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.hero-article-container{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 94%;
+    z-index: 10;
+}
+
+.hero-article-container > *{
+    transform: translateY(10vw);
+}
+
+.hero-article-container > pre {
+    width: 100%;
+    max-width: 155px;
+    white-space: wrap;
+
+}
+
+.hero-article-container button:hover{
+    box-shadow:inset 0px 0px 10px .5px white;
+}
+
+[data-img-container]{
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    
+}
+
+[data-img-Container] >img{
+    margin-top: 6.7vw;
+}
+
+[alt="neon"]{
+    position: absolute;
+    inset: 0;
+    margin-top: -250px;
+    margin-left: -250px;
+    z-index: -1;
+    filter: blur(30px);
+    transition: .0s;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+    .heroSection{
+        max-height: max-content;
+        padding-bottom: 50px;
+    }
+
+    [data-hero-heading]{
+        font-size: 9vw;
+    }
+
+    .hero-article-container{
+        display: block;
+        position: static;
+        width: 100%;
+    }
+
+    .hero-article-container > *{
+        transform: translateY(1vw);
+    }
+
+    .hero-article-container > pre {
+        max-width: max-content;
+    }
+
+    .button-container{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .hero-article-container button{
+        aspect-ratio: 4/1.2;
+        width: 120px;
+        font-size: 1rem;
+        right: 0;
+        
+    }
+
+    [data-img-Container]{
+        justify-self: center;
+        height: max-content;
+        position: static;
+        z-index: 0;
+    }
+
+    [data-img-Container] >img{
+        width: 55vw;
+        margin-top: 0px;
+    }
+
+
+}

@@ -1,0 +1,58 @@
+.portfolio{
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    justify-content: center;
+    color:  var( --text_clr);;
+    background-color: var(--services-sec-bg);
+    border-top: 0px solid var( --text_clr);;
+}
+
+.portfolio *{
+    color: var(--text_clr);
+    font: var(--comicRelief);
+}
+
+.portfolio h3{
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 3px;
+}
+
+.projectList{
+    padding: 10px;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(150px, 30vw, 220px));
+    justify-content: center;
+    gap: clamp(5px, 3vw, 15px);
+}
+
+.projectItems{
+    aspect-ratio: 1/1;
+    width: clamp(150px, 30vw, 220px);
+    background-color: white;
+
+}
+
+.projectHeading{
+    text-align: left;
+}
+
+.projectHeading h2{
+    font-weight: bold;
+    margin-bottom: -11px;
+}
+
+.projectHeading small {
+    font-size: var(--BodyTextFontSize);
+}
+
+@media(max-width: 740px){
+    .projectList{
+        padding: 5px;
+        width: 100vw;
+    }
+}
