@@ -28,7 +28,7 @@ export default function TechStack() {
                 </div>
                 <div className='stackContainer'>
                 {!isLoading ? stacks && stacks.map(
-                    item => <SpotlightCard className="custom-spotlight-card"
+                    item => <SpotlightCard key={item.Stack} className="custom-spotlight-card"
                             spotlightColor="rgba(255, 255, 255, 0.2)">
                                 <div className='stack'>
                                     <img src={item["Logo"]} alt="stackLogo" />
@@ -38,7 +38,7 @@ export default function TechStack() {
                                     </article>
                                 </div>
                             </SpotlightCard>)
-                        : <i><span class="loader"></span> Loading....</i>}
+                        : <i><span className="loader"></span> Loading....</i>}
                 </div> 
             </div>
             <hr />

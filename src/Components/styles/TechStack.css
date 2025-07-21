@@ -14,22 +14,35 @@
 .stackContainer{
     display: grid;
     align-items: center;
-    justify-content:space-around;
+    justify-content: center;
     gap: 7.6px;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(146px, 1fr));
 }
 
 .stackContainer *, .stackHead *{
     font: var(--bodyText);
 }
 
+.custom-spotlight-card{
+    position: block;
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    height: 50px;
+
+    display: grid;
+    align-items: center;
+    justify-content: left;
+}
+
 .stack{
-    min-width: 136px;
+    width: max-content;
+    min-width: 145px;
     height: 30px;
     display: flex;
-    margin: 5px;
     gap: 6px;
     align-items: center;
+    justify-content: left;
 }
 
 [alt="stackLogo"]{
@@ -53,4 +66,10 @@
 .stack article p{
     font-size: 11px;
     letter-spacing: .5px;
+}
+
+@media (max-width: 600px) {
+    .stackContainer{
+        max-width: 340px;
+    }
 }

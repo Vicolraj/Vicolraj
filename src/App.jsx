@@ -18,19 +18,6 @@ import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
       AOS.init();
     }, [])
 
-    //themeMode is use to get the system deafult mode whether dark or light
-
-
-    const swMode = () => {
-      if(cssClass == 'darkStyle'){
-        setTheme('lightStyle')
-      }
-      else{
-        setTheme('darkStyle')
-      }
-    }
-    let x = "iutyrtetrykuti";
-
   return (
     <ClickSpark
       sparkColor='#fff'

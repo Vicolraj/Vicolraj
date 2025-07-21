@@ -32,8 +32,11 @@
 
 .projectItems{
     aspect-ratio: 1/1;
-    width: clamp(150px, 30vw, 220px);
-    background-color: white;
+    width: clamp(200px, 30vw, 220px);
+    background-color: red;
+    display: flex;
+    align-items: center;
+    border: 1px green solid;
 
 }
 
