@@ -1,54 +1,65 @@
 .portfolio{
     width: 100%;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: grid;
-    justify-content: center;
-    color:  var( --text_clr);;
+    color:  var( --txt-l-color);
     background-color: var(--services-sec-bg);
-    border-top: 0px solid var( --text_clr);;
 }
 
 .portfolio *{
-    color: var(--text_clr);
-    font: var(--comicRelief);
+    color: var(--txt-l-color);
+    font: var(--bodyText);
 }
 
-.portfolio h3{
-    font-weight: bold;
-    font-size: large;
-    letter-spacing: 3px;
+.portfolio .custom-spotlight-card{
+    width: 100%;
+    height: 100%;
 }
+
+
+.portfolio h3{
+    font-size: var(--HeadingFontSize);
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
 
 .projectList{
     padding: 10px;
-    width: 70vw;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, clamp(150px, 30vw, 220px));
+    grid-template-columns: repeat(auto-fit, clamp(200px, 30vw, 250px));
     justify-content: center;
     gap: clamp(5px, 3vw, 15px);
+    box-sizing: border-box;
+}
+
+.itemwrapper{
+    width: max-content;
 }
 
 .projectItems{
     aspect-ratio: 1/1;
-    width: clamp(200px, 30vw, 220px);
-
-    display: flex;
-    align-items: center;
+    background-color: rgba(255, 255, 255, 0.172);
+    border: 1px solid rgba(255, 253, 253, 0.286);
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
 }
 
-.projectHeading{
-    text-align: left;
+
+.projectItems:hover{
+
 }
 
-.projectHeading h2{
-    font-weight: bold;
-    margin-bottom: -11px;
+.projectItems:hover img{
+    transition: .5s; 
+    scale: 1.05;
+    
 }
 
-.projectHeading small {
-    font-size: var(--BodyTextFontSize);
+.projectItems img{
+    width: 100%;
+    margin: auto 100px;
 }
 
 .projectActionButton{

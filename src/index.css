@@ -20,6 +20,10 @@
  
 }
 
+html{
+  background-color: black;
+}
+
 *{
   user-select: none;
   padding: 0;
