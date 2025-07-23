@@ -1,7 +1,9 @@
 .aboutSection > div{
     background-color: var(--pry_clr);
     padding: 15px;
+    position: relative;
     border: .3px solid rgba(255, 255, 255, 0.135);
+    backdrop-filter: blur(10px);
 }
 
 .aboutSection *{

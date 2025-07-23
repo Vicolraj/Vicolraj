@@ -1,19 +1,21 @@
-/* .static-bg-logo{
-    position: fixed;
+.static-bg-logo{
+    position: absolute;
     bottom: 0;
-    z-index: 100;
-} */
-
-[alt='logo']{
-    
-    width: clamp(2.5rem, 1.5vw, 2rem);
-    left: 0;
-    margin: 50px;
-  }
-
-  [alt='logo']::after{
-    content: "Vicolraj";
+    z-index: -2;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0.1;
+    margin-left: -15px;
+    filter: blur(10px);
+}
+
+[alt='logo']{
+    width: 230px;
+    left: 0;
+    right: 0;
+    top: 0;
   }

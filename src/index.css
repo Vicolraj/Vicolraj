@@ -35,9 +35,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 2rem;
-  
+  width: 100%;  
 }
 
 .modSec > *{
@@ -125,5 +123,21 @@ body{
   100% {
     transform: scale(1);
     opacity: 0;
+  }
+}
+
+@media (max-width: 740px) {
+  .modSec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;  
+  }
+
+  .modSec > *{
+    min-width: 90vw;
+    max-width: 730px;
+    align-self: center;
   }
 }

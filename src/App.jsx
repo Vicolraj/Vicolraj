@@ -50,11 +50,11 @@ import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
         <HeroComponent/>
         <About />
         
-        <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+        <FadeContent blur={true} duration={800} easing="ease-out" initialOpacity={0}>
           <TechStack/>
         </FadeContent>
 
-         <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
+         <FadeContent blur={false} duration={800} easing="ease-out" initialOpacity={0}>
           <Portfolio />
           <Recommendation />
         </FadeContent>
