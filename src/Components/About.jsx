@@ -28,7 +28,7 @@ export default function About() {
             baseRotation={5}
             blurStrength={10}
             >
-                I'm a frontend-focused developer with more than 4 years of experience specializing in React.js, Blazor(C#), Framer Motion, and Rive. I blend motion, interactivity, and design to craft immersive web experiences. I,m also a skilled graphic designer and proficient in Word and Excel, delivering visually polished, high-performing, and user-friendly solutions.
+                I'm a frontend-focused developer with over 3 years of experience specializing in React.js, Blazor(C#), Framer Motion, and Rive. I blend motion, interactivity, and design to craft immersive web experiences. I,m also a skilled graphic designer and proficient in Word and Excel, delivering visually polished, high-performing, and user-friendly solutions.
         </ScrollReveal>
 
         <StaticBgLogo/>

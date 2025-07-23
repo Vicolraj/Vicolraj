@@ -1,5 +1,5 @@
 import logo from '/icon-512.png';
-import '../styles/StaticBgLogo.css';
+import './styles/StaticBgLogo.css';
 
 export const StaticBgLogo = () => {
     return (

@@ -20,6 +20,20 @@ import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
         once: false, // whether animation should happen only once - while scrolling down
         mirror: false // whether elements should animate out while scrolling past them
       });
+
+      document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        alert("Right-click is disabled!");
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "PrintScreen" || (event.ctrlKey && event.key === "s")) {
+          alert("Screenshots are not allowed!");
+          event.preventDefault();
+        }
+      });
+
+
     }, [])
 
   return (
