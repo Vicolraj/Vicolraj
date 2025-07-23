@@ -1,3 +1,7 @@
+#techStack{
+    overflow: hidden;
+}
+
 .stackHead{
     margin-bottom: 10px;
 }
@@ -15,8 +19,8 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    gap: 7.6px;
-    grid-template-columns: repeat(auto-fit, minmax(146px, 1fr));
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(143px, 1fr));
 }
 
 .stackContainer *, .stackHead *{
@@ -37,7 +41,7 @@
 
 .stack{
     width: max-content;
-    min-width: 145px;
+    min-width: 143px;
     height: 30px;
     display: flex;
     gap: 6px;

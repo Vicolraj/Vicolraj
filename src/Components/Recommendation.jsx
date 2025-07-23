@@ -2,9 +2,9 @@ import './styles/Recommendation.css'
 import Carousel from '../ReactBits/Carousel/Carousel.jsx'
 import ScrollFloat from '../ReactBits/ScrollFloat/ScrollFloat.jsx'
 
-function SimpleSlider() {
+function Recommendation() {
   return (
-    <section className='recommendation'>
+    <section className='recommendation' data-aos="zoom-in" data-aos-duration = "800">
       <ScrollFloat
         animationDuration={1}
         ease='back.inOut(2)'
@@ -30,7 +30,7 @@ function SimpleSlider() {
   );
 }
 
-export default SimpleSlider;
+export default Recommendation;
 
 
 

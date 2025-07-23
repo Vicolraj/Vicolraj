@@ -8,15 +8,6 @@
     z-index: 200;
   }
   
-  [alt='logo']{
-    width: 35px;
-    transition: .5s;
-    margin-left: 10px;
-    cursor: pointer;
-    position: absolute;
-    left: 0;
-  }
-  
   .headerComponent{
     backdrop-filter: blur(10px);  
     overflow:visible;

@@ -15,7 +15,11 @@ import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
 
   export default function App() {
     useEffect(() => {
-      AOS.init();
+      AOS.init({
+        easing: 'ease-in-out', // type of easing
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false // whether elements should animate out while scrolling past them
+      });
     }, [])
 
   return (
@@ -40,6 +44,7 @@ import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
           <Portfolio />
           <Recommendation />
         </FadeContent>
+
         
       </main>
     </ClickSpark>

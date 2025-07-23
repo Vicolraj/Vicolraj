@@ -78,10 +78,12 @@
     .heroSection{
         max-height: max-content;
         padding-bottom: 50px;
+        padding-top: 50px;
     }
 
     [data-hero-heading]{
         font-size: 9vw;
+        letter-spacing: 0.5vw;
     }
 
     .hero-article-container{

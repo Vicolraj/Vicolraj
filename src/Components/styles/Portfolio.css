@@ -33,11 +33,9 @@
 .projectItems{
     aspect-ratio: 1/1;
     width: clamp(200px, 30vw, 220px);
-    background-color: red;
+
     display: flex;
     align-items: center;
-    border: 1px green solid;
-
 }
 
 .projectHeading{
@@ -51,6 +49,11 @@
 
 .projectHeading small {
     font-size: var(--BodyTextFontSize);
+}
+
+.projectActionButton{
+    width: max-content;
+    height: max-content;
 }
 
 @media(max-width: 740px){
