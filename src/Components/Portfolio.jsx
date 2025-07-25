@@ -1,63 +1,67 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './styles/Portfolio.css'
 import GlareHover from '../ReactBits/GlareHover/GlareHover.jsx';
-import SpotlightCard from '../ReactBits/SpotlightCard/SpotlightCard.jsx';
-import useAPIData from '../Hooks/useAPIData.js';import { SpotLight } from '@react-three/drei';
+import useAPIData from '../Hooks/useAPIData.js';
+import  ProjectListContainer  from './ProjectListContainer.jsx';
+import EmblaCarousel from '../Embla/js/EmblaCarousel.jsx';
+
+import '../Embla/css/embla.css';
+import '../Embla/css/sandbox.css';
+
+ 
  
 
 
 const Portfolio = () => {
-    
+    let url = import.meta.env.VITE_API + import.meta.env.VITE_PROJECTS;
+    const { output, isLoading } = useAPIData(url, 'fetch');
+    console.table(output);
+
+
+
+    const OPTIONS = { loop: true }
+ 
+    const [showAll, setShowAll] = useState(false);
+
+ 
     return(
     <section className='portfolio' data-aos="fade-up" data-aos-duration="800">
-        <h3 className='heading'>Portfolio</h3>
-        <small></small>
-        <div className="projectList">
-             <div className=" " data-aos="zoom-in">
-            <SpotlightCard className="custom-spotlight-card projectItems"
-                            spotlightColor="rgba(255, 0, 221, 0.3)">
-               
-                
-                    <h4>Project 1</h4>
-                    {/* <img src="https://vicolraj.github.io/Pictures/cover.png" alt="" /> */}
-                    <div>
-                        <GlareHover  as="button" className="projectActionButton" color="cyan" speed="5s"><a href='live'>Live</a></GlareHover>
-                        <GlareHover as="button" className="projectActionButton" color="cyan" speed="5s"><a href="live">github</a></GlareHover>
-                    </div>
-               
-            </SpotlightCard>
-             </div>
-            
-            <div className="projectItems">
-            
-                <h4>Project 1</h4>
-                <div>
-                    <GlareHover as="button" className="projectActionButton" color="cyan" speed="5s"><a href='live'>Live</a></GlareHover>
-                    <GlareHover as="button" className="projectActionButton" color="cyan" speed="5s"><a href="live">github</a></GlareHover>
+        <h3 className='heading'>Portfolio </h3>
+        <div>A few of my latest website builds</div>
+        {/* {<div   className="projectList">
+            <button clasName = "back"></button>
+            {isLoading && <div className="loading">Loading...</div>}
+            {output && output.map((item, i) => (
+                <div key={i}  >
+                    <ProjectListContainer name={item.Name}
+                    description={''}
+                    imgUrl={item.Image}
+                    githubLink={item.GitHubLink}
+                    liveLink={item.LiveLink}
+                    coverType = {item["CoverType"]} />
                 </div>
-            </div> 
+            ))}
 
-            <div data-aos="zoom-in" className="projectItems">
-            
-                <h4>Project 1</h4>
-                <div>
-                    <GlareHover as="button" className="projectActionButton" color="cyan" speed="5s"><a href='live'>Live</a></GlareHover>
-                    <GlareHover as="button" className="projectActionButton" color="cyan" speed="5s"><a href="live">github</a></GlareHover>
+            {isLoading && <div className="loading">Loading...</div>}
+            {output && output.map((item, i) => (
+                <div key={i}  >
+                    <ProjectListContainer name={item.Name}
+                    description={''}
+                    imgUrl={item.Image}
+                    githubLink={item.GitHubLink}
+                    liveLink={item.LiveLink}
+                    coverType = {item["CoverType"]} />
                 </div>
-            </div>
-
-            <div data-aos="zoom-in" className="projectItems">
-            
-                <h4>Project 1</h4>
-                <div>
-                    <GlareHover as="button" className="projectActionButton" color="cyan" speed="5s"><a href='live'>Live</a></GlareHover>
-                    <GlareHover as="button" className="projectActionButton" color="cyan" speed="5s"><a href="live">github</a></GlareHover>
-                </div>
-            </div>
+            ))}
              
-                       
-        </div>
-       <hr /> 
+            
+          
+            
+       
+        </div> } */}
+
+        <EmblaCarousel showAll = {showAll} setShowAll = {setShowAll} slides={output} options={OPTIONS} />
+
     </section>)
 }
 

@@ -5,6 +5,7 @@ import ScrollFloat from '../ReactBits/ScrollFloat/ScrollFloat.jsx'
 function Recommendation() {
   return (
     <section className='recommendation' data-aos="zoom-in" data-aos-duration = "800">
+       <hr /> 
       <ScrollFloat
         animationDuration={1}
         ease='back.inOut(2)'
@@ -25,7 +26,7 @@ function Recommendation() {
       />
       </div>
       
-
+       <hr /> 
     </section>
   );
 }

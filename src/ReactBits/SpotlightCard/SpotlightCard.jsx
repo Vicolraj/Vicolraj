@@ -8,7 +8,7 @@ import "./SpotlightCard.css";
 const SpotlightCard = ({
   children,
   className = "",
-  spotlightColor = "rgba(255, 255, 255, 0.3)",
+  spotlightColor = "rgba(255, 255, 255, 0.21)",
 }) => {
   const divRef = useRef(null);
 

@@ -13,6 +13,7 @@ import About from './Components/About.jsx'
 import ClickSpark from './ReactBits/ClickSpark/ClickSpark.jsx'
 import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
 
+
   export default function App() {
     useEffect(() => {
       AOS.init({
@@ -21,20 +22,26 @@ import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
         mirror: false // whether elements should animate out while scrolling past them
       });
 
-      document.addEventListener("contextmenu", (event) => {
-        event.preventDefault();
-        alert("Right-click is disabled!");
-      });
+      
 
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "PrintScreen" || (event.ctrlKey && event.key === "s")) {
-          alert("Screenshots are not allowed!");
-          event.preventDefault();
-        }
-      });
+
+
+      // document.addEventListener("contextmenu", (event) => {
+      //   event.preventDefault();
+      //   alert("Right-click is disabled!");
+      // });
+
+      // document.addEventListener("keydown", (event) => {
+      //   if (event.key === "PrintScreen" || (event.ctrlKey && event.key === "s")) {
+      //     alert("Screenshots are not allowed!");
+      //     event.preventDefault();
+      //   }
+      // });
 
 
     }, [])
+
+
 
   return (
     <ClickSpark
@@ -58,6 +65,7 @@ import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
           <Portfolio />
           <Recommendation />
         </FadeContent>
+         
 
         
       </main>

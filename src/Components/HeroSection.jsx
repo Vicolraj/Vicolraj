@@ -25,6 +25,8 @@ const HeroComponent = () => {
           BOLD AND MEMORABLE PROJECTS 📌
           <br />
         </pre>
+
+        {/* <button className='hero-btn' data-aos = "fade-up">Download Resume</button> */}
       </div>
       <div data-img-container className='imgcon'
             data-aos = "zoom-out"

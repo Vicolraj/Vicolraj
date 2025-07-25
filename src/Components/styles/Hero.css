@@ -3,6 +3,7 @@
     padding-top: 30px;
     height: 100vh;
     background-color: none;
+    background-color: transparent !important;
 }
 
 .hero-name-holder > *{
@@ -17,6 +18,8 @@
     letter-spacing: 1.5vw ;
     color: var(--txt-l-color);
     max-width: 100%;
+    position: relative;
+    z-index: 10;
     white-space: nowrap;
 }
 
@@ -65,7 +68,7 @@
     inset: 0;
     margin-top: -250px;
     margin-left: -250px;
-    z-index: -1;
+    z-index: 0;
     filter: blur(30px);
     transition: .0s;
 }
@@ -87,7 +90,7 @@
 
     .hero-article-container{
         display: block;
-        position: static;
+        position: relative;
         width: 100%;
     }
 
@@ -115,13 +118,14 @@
     [data-img-Container]{
         justify-self: center;
         height: max-content;
-        position: static;
-        z-index: 0;
+        position: relative;
+        z-index: 10;
     }
 
     [data-img-Container] >img{
         width: 55vw;
         margin-top: 0px;
+     
     }
 
 
