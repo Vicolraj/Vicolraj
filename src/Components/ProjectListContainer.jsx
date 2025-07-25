@@ -14,7 +14,7 @@ const ProjectListContainer = ({name, imgUrl, description, githubLink, liveLink, 
                     <small>{description}</small>
                     <div>
                         {liveLink.trim() &&<span onClick={() => window.open(liveLink, "_black")}><GlareHover  as="button" className="projectActionButton" color="cyan" speed="5s"> Live</GlareHover></span>}
-                        <span onClick={() => window.open(githubLink, "_blank")}><GlareHover as="button" className="projectActionButton" color="cyan" speed="5s">Github</GlareHover></span>
+                        {githubLink && <span onClick={() => window.open(githubLink, "_blank")}><GlareHover as="button" className="projectActionButton" color="cyan" speed="5s">Github</GlareHover></span>}
                     </div>
                
             </SpotlightCard>

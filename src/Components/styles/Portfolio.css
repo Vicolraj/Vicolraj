@@ -72,7 +72,17 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+}
 
+.projectItems::after{
+    content: "Image loading...";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -97,6 +107,15 @@ div:has( > * >.projectActionButton){
     width: 100%;
     display: flex;
     gap: 10px;
+}
+
+.back{
+    background: red;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .projectActionButton{

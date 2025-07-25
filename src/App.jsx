@@ -13,8 +13,14 @@ import About from './Components/About.jsx'
 import ClickSpark from './ReactBits/ClickSpark/ClickSpark.jsx'
 import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
 
+import useAPIData from './Hooks/useAPIData.js'
+
 
   export default function App() {
+    let url = import.meta.env.VITE_API + import.meta.env.VITE_SECTIONS;
+    const { output, isLoading } = useAPIData(url, 'fetch');
+
+    console.table(output);
     useEffect(() => {
       AOS.init({
         easing: 'ease-in-out', // type of easing
@@ -63,7 +69,7 @@ import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
 
          <FadeContent blur={false} duration={800} easing="ease-out" initialOpacity={0}>
           <Portfolio />
-          <Recommendation />
+          {output ? output[0].Testimonials.trim() && <Recommendation /> : ''}
         </FadeContent>
          
 

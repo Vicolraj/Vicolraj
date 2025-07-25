@@ -25,11 +25,11 @@ const Portfolio = () => {
 
  
     return(
-    <section className='portfolio' data-aos="fade-up" data-aos-duration="800">
+    <section id='projects' className='portfolio' data-aos="fade-up" data-aos-duration="800">
         <h3 className='heading'>Portfolio </h3>
         <div>A few of my latest website builds</div>
-        {/* {<div   className="projectList">
-            <button clasName = "back"></button>
+        {<div style={{scale: showAll ? 1 : 0, transition: '.5s'}}   className="projectList">
+            <button className = "back" onClick={() => setShowAll(false)}>back</button>
             {isLoading && <div className="loading">Loading...</div>}
             {output && output.map((item, i) => (
                 <div key={i}  >
@@ -40,25 +40,9 @@ const Portfolio = () => {
                     liveLink={item.LiveLink}
                     coverType = {item["CoverType"]} />
                 </div>
-            ))}
-
-            {isLoading && <div className="loading">Loading...</div>}
-            {output && output.map((item, i) => (
-                <div key={i}  >
-                    <ProjectListContainer name={item.Name}
-                    description={''}
-                    imgUrl={item.Image}
-                    githubLink={item.GitHubLink}
-                    liveLink={item.LiveLink}
-                    coverType = {item["CoverType"]} />
-                </div>
-            ))}
-             
-            
-          
-            
+            ))}           
        
-        </div> } */}
+        </div> }
 
         <EmblaCarousel showAll = {showAll} setShowAll = {setShowAll} slides={output} options={OPTIONS} />
 
