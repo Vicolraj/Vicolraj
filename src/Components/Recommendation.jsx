@@ -1,5 +1,5 @@
 import './styles/Recommendation.css'
-import Carousel from '../ReactBits/Carousel/Carousel.jsx'
+import Slider from '../keen-slider/Slider.jsx'
 import ScrollFloat from '../ReactBits/ScrollFloat/ScrollFloat.jsx'
 import useAPIData from '../Hooks/useAPIData'
 
@@ -24,7 +24,7 @@ function Recommendation() {
           Client Testimonials
         </ScrollFloat>
         <div className='testimonials'>
-         {output ? <Carousel
+         {output ? <Slider
           item = {output}
           baseWidth={300}
           autoplay={true}
@@ -34,6 +34,8 @@ function Recommendation() {
           round={false}
         /> : <i><span className="loader"></span> Loading....</i>}
         </div>
+
+        <p className='instruction'><small>Discover more testimonials by swiping.</small></p>
       </div>
       
        <hr /> 

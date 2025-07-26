@@ -60,7 +60,7 @@ const EmblaCarousel = (props) => {
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
 
-          <button onClick={() => {showAll === true ? setShowAll(!showAll) : setShowAll(true)}} className='seeall'>See all</button>
+          <button onClick={() => {showAll === true ? setShowAll(!showAll) : setShowAll(true)}} className='seeall'>View all</button>
 
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>

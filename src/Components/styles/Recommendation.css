@@ -38,6 +38,12 @@
     gap: 1rem; /* Consistent spacing */
 }
 
+.instruction{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
 /* Media query fixes */
 @media (min-width: 740px) { /* Added 'px' unit */
     .recommendation {

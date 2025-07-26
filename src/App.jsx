@@ -11,6 +11,7 @@ import TechStack from './Components/TechStack.jsx'
 import Recommendation from './Components/Recommendation.jsx'
 import Portfolio from './Components/Portfolio.jsx'
 import About from './Components/About.jsx'
+import Contact from './Components/Contact.jsx'
 
 
 import ClickSpark from './ReactBits/ClickSpark/ClickSpark.jsx'
@@ -79,7 +80,7 @@ import useAPIData from './Hooks/useAPIData.js'
         </FadeContent>
          
 
-        
+        <Contact/>
       </main>
     </ClickSpark>
     
