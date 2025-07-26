@@ -22,6 +22,7 @@
 
 html{
   background-color: black;
+  scroll-behavior: smooth;
 }
 
 *{
@@ -30,7 +31,7 @@ html{
   margin: 0;
   box-sizing: border-box;
   color: var(--txt-l-color);
-  transition: .5s;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   font: tikTokSans, sans-serif;
 }
 
@@ -53,7 +54,8 @@ a{
 }
 
 hr{
-  width: 100%;
+  width: 100vw;
+  max-width: 730px;
   height: .5px;
   background-color: var(--txt-l-color);
   border: none;
@@ -75,14 +77,23 @@ button {
  
 
 body{
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   scroll-snap-align: center;
    background-color: black;
    min-height: 100vh;
-   animation: fade-in 1  2s ease;
+   animation: fade-in 1  2.2s ease;
 }
 
-*::-webkit-scrollbar{
+* {
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* Internet Explorer 10+ */
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Safari, Edge (WebKit browsers) */
+*::-webkit-scrollbar {
   display: none;
 }
 
@@ -144,4 +155,23 @@ body{
     max-width: 730px;
     align-self: center;
   }
+
+
+  hr{
+    width: 10%;
+    max-width: 9vw;
+    height: .5px;
+    background-color: var(--txt-l-color);
+    border: none;
+    
+    margin: 2rem 0;
+    opacity: .3;
+  }
 }
+
+
+
+
+
+
+ 

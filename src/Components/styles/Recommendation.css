@@ -1,24 +1,56 @@
-.recommendation{
+.recommendation {
     display: grid;
+    position: relative;
     justify-content: center;
     align-items: center;
     font: var(--bodyText);
-    padding: 20px;
-    gap: 1vw;
+    padding: 0 20px;
+    gap: 1rem; /* Changed from vw to rem for better consistency */
     max-height: max-content;
+    width: 100%; /* Added to ensure proper containment */
+    margin-top: -20px;
 }
 
-.recommendation .heading > *{
+/* Mobile-first approach */
+.recommendation > * {
+    width: 100%;
+    max-width: 100%; /* Ensures elements don't overflow */
+}
+
+.recommendation > div{
+    margin-top: -50px;
+    padding-top: 0;
+}
+
+.recommendation .heading > * {
     width: 100%;
     color: white;
     font-size: var(--HeadingFontSize);
     text-align: center;
     font-weight: 600;
     padding: 20px;
-    margin-bottom: -20px;
 }
 
-.testimonials{
+.testimonials {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 1rem; /* Consistent spacing */
+}
+
+/* Media query fixes */
+@media (min-width: 740px) { /* Added 'px' unit */
+    .recommendation {
+        grid-template-columns: auto-fit, minmax(300px, 1fr); /* Responsive grid */
+        gap: 1.5rem;
+    }
+    
+    .recommendation > * {
+        max-width: 730px; /* Removed fixed 20vw which was too small */
+        width: 100vw; /* Allows natural sizing */
+    }
+    
+    .testimonials {
+        justify-content: space-around; /* Better spacing for larger screens */
+    }
 }

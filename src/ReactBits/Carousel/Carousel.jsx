@@ -15,6 +15,8 @@ import {
 
 import "./Carousel.css";
 
+
+
 const DEFAULT_ITEMS = [
   {
     title: "Text Animations",
@@ -62,6 +64,10 @@ export default function Carousel({
   loop = false,
   round = false,
 }) {
+
+
+
+
   const containerPadding = 16;
   const itemWidth = baseWidth - containerPadding * 2;
   const trackItemOffset = itemWidth + GAP;
@@ -197,11 +203,11 @@ export default function Carousel({
               transition={effectiveTransition}
             >
               <div className={`carousel-item-header ${round ? "round" : ""}`}>
-                <span className="carousel-icon-container">{item.icon}</span>
+                <span className="carousel-icon-container">{item.ImgLink}</span>
               </div>
               <div className="carousel-item-content">
-                <div className="carousel-item-title">{item.title}</div>
-                <p className="carousel-item-description">{item.description}</p>
+                <div className="carousel-item-title">{item.Name}</div>
+                <p className="carousel-item-description">{item.Content}</p>
               </div>
             </motion.div>
           );

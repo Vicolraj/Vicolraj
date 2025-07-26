@@ -1,7 +1,10 @@
-import { use, useEffect, useState } from 'react'
+import { use, useEffect, useState, useRef } from 'react'
 import './App.css'
+
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+ 
+
 import HeaderComponent from './Components/Header.jsx'
 import HeroComponent from './Components/HeroSection.jsx'
 import TechStack from './Components/TechStack.jsx'
@@ -12,15 +15,16 @@ import About from './Components/About.jsx'
 
 import ClickSpark from './ReactBits/ClickSpark/ClickSpark.jsx'
 import FadeContent from './ReactBits/FadeContent/FadeContent.jsx'
-
+ 
 import useAPIData from './Hooks/useAPIData.js'
 
 
   export default function App() {
     let url = import.meta.env.VITE_API + import.meta.env.VITE_SECTIONS;
     const { output, isLoading } = useAPIData(url, 'fetch');
+    const scrollRef = useRef(null);
 
-    console.table(output);
+   
     useEffect(() => {
       AOS.init({
         easing: 'ease-in-out', // type of easing
@@ -28,9 +32,11 @@ import useAPIData from './Hooks/useAPIData.js'
         mirror: false // whether elements should animate out while scrolling past them
       });
 
-      
-
-
+   
+     
+   
+    
+   
 
       // document.addEventListener("contextmenu", (event) => {
       //   event.preventDefault();
@@ -57,7 +63,7 @@ import useAPIData from './Hooks/useAPIData.js'
       sparkCount={8}
       duration={400}
     >
-    <main className={`componentContainer`}> 
+    <main className={`componentContainer`} ref={scrollRef} data-scroll-container> 
 
         <HeaderComponent/>
         <HeroComponent/>

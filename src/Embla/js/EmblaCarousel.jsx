@@ -47,7 +47,7 @@ const EmblaCarousel = (props) => {
               <ProjectListContainer name={item.Name}
                     description={item.Description}
                     imgUrl={item.Image}
-                    githubLink={item.GitHubLink}
+                    githubLink={item.GithubLink}
                     liveLink={item.LiveLink}
                     coverType = {item["CoverType"]} /> 
                   

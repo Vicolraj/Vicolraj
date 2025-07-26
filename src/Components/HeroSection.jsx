@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import heroPic from '../assets/vicolrajbg.png'
 import neon from '../assets/neon.gif'
 import './styles/Hero.css'
-import TypingEffect from './TypingFX.jsx'
 import useMousePositon from '../Hooks/useMousePositon.js'
 
 

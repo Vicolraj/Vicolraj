@@ -40,7 +40,7 @@
     padding-top: 70px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, clamp(200px, 30vw, 250px));
+    grid-template-columns: repeat(auto-fit, clamp(200px, 30vw, 320px));
     justify-content: center;
     gap: clamp(5px, 3vw, 15px);
     box-sizing: border-box;
@@ -71,7 +71,6 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    gap: 5px;
 }
 
 .projectItems::after{
@@ -110,13 +109,41 @@ div:has( > * >.projectActionButton){
 }
 
 .back{
-    background: red;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--txt-l-color);
+    position: fixed;
     top: 0;
     left: 0;
+    margin: 10px 15px;
+    width: max-content;
+    max-height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 14px;
+    background: #1c1c1e; /* Very dark grey */
+    box-shadow:
+        6px 6px 14px rgba(255, 0, 238, 0.163),
+    -6px -6px 14px rgba(72, 0, 255, 0.05);
+    transition: all 0.3s ease;
 }
+
+.back:hover{
+    box-shadow:
+    inset 6px 6px 14px rgba(63, 62, 62, 0.7),
+    inset -6px -6px 14px rgba(255, 255, 255, 0.05);
+    color: #ff69b4; /* Hot pink or any highlight color */
+    transform: translateY(-2px) scale(1.03);
+}
+
+
+.back svg{
+    width: 20px;
+    height: 20px;
+    color: var(--txt-l-color);
+}  
 
 .projectActionButton{
     width: max-content;
@@ -139,15 +166,16 @@ div:has( > * >.projectActionButton){
     margin-top: 5px;
     display: block;
     word-spacing: 1.2;
-    line-height: 1.5;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    line-height: 1.2;
     font-weight: 400;
     max-width: 400px;
     margin-left: 15px;
     text-align: left;
+    text-overflow: ellipsis;
 }
 
-
-/* SLIDER KEEN */
+ 
 
  
  

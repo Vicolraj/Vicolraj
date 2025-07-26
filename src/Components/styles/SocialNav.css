@@ -1,0 +1,19 @@
+.social-nav {
+  display: flex;
+  gap: 1.3rem;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1rem; */
+}
+
+.social-icon {
+  /* font-size: 2.2rem;  */
+  color: var(--text-color, #333);
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform: scale(1.7);
+}
+
+.social-icon:hover {
+  transform: scale(1.9);
+  color: var(--accent-color, #0077ff); /* Customize accent color */
+}

@@ -2,6 +2,8 @@ import './styles/About.css'
 import ScrollFloat from '../ReactBits/ScrollFloat/ScrollFloat.jsx'
 import ScrollReveal from '../ReactBits/ScrollReveal/ScrollReveal.jsx'
 import { StaticBgLogo } from './StaticBgLogo.jsx';
+import SocialNav from './SocialNav.jsx';
+
 
 
 export default function About() {
@@ -33,6 +35,9 @@ export default function About() {
 
         <StaticBgLogo/>
 
+            </div>
+            <div data-social-logo data-aos="fade-up">
+                <SocialNav/>
             </div>
             <hr />
         </section>
