@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles/Contact.css'
-import { FaUser, FaEnvelope, FaComment, FaPaperPlane, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaComment, FaPaperPlane, FaPhone } from 'react-icons/fa';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -24,21 +24,18 @@ const ContactForm = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
+  e.preventDefault();
 
-    // Construct mailto link
-    const subject = `Message from ${formData.name}`;
-    const body = `${formData.message}\n\nFrom: ${formData.name}\nEmail: ${formData.email}`;
-    const mailtoLink = `mailto:vicolraj@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const subject = `Message from ${formData.name}`;
+  const body = `${formData.message}\n\nName: ${formData.name}\nEmail: ${formData.email}`;
+  const mailtoLink = `mailto:vicolraj@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Open default mail client
-    window.location.href = mailtoLink;
+  window.location.href = mailtoLink;
 
-    // Show success notification
-    showNotification('Mail client opened!', 'success');
-    setIsLoading(false);
-  };
+  // Optional visual feedback (won't fire if mail app hijacks navigation)
+  showNotification('Opening mail app...', 'success');
+};
+
 
   const showNotification = (message, type) => {
     setNotification({
@@ -56,16 +53,8 @@ const ContactForm = () => {
     }, 3000);
   };
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text).then(() => {
-      showNotification('Copied to clipboard!', 'success');
-    }).catch(() => {
-      showNotification('Failed to copy', 'error');
-    });
-  };
-
   return (
-    <section className='modSec'>
+    <section className='modSec contactMe'>
       <div className="contact-container">
         <div className="window-header">
           <div className="window-buttons">
@@ -81,7 +70,6 @@ const ContactForm = () => {
           
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group float-label">
-              <FaUser className="input-icon" />
               <input 
                 type="text" 
                 id="name" 
@@ -95,7 +83,6 @@ const ContactForm = () => {
             </div>
             
             <div className="form-group float-label">
-              <FaEnvelope className="input-icon" />
               <input 
                 type="email" 
                 id="email" 
@@ -128,22 +115,6 @@ const ContactForm = () => {
             </button>
           </form>
           
-          <div className="contact-info">
-            <div className="info-card" onClick={() => copyToClipboard('vicolraj@gmail.com')}>
-              <h3><FaEnvelope /> Email</h3>
-              <p>vicolraj@gmail.com</p>
-            </div>
-            
-            <div className="info-card" onClick={() => copyToClipboard('+11234567890')}>
-              <h3><FaPhone /> Phone</h3>
-              <p>+1 (123) 456-7890</p>
-            </div>
-            
-            <div className="info-card" onClick={() => window.open('https://maps.google.com', '_blank')}>
-              <h3><FaMapMarkerAlt /> Location</h3>
-              <p>San Francisco, CA</p>
-            </div>
-          </div>
         </div>
 
         {notification.show && (

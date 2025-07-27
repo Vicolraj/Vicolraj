@@ -35,6 +35,7 @@ html{
   font: tikTokSans, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  outline: none;
 }
 
 .modSec{
