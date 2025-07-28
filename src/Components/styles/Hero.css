@@ -72,8 +72,9 @@
     margin-top: -250px;
     margin-left: -250px;
     z-index: 0;
-    filter: blur(30px);
+    filter: blur(20px);
     transition: .0s;
+    opacity: .5;
 }
 
 

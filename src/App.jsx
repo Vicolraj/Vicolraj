@@ -1,4 +1,4 @@
-import { use, useEffect, useState, useRef } from 'react'
+import {useEffect, useRef } from 'react'
 import './App.css'
 
 import AOS from 'aos'
@@ -12,8 +12,7 @@ import Recommendation from './Components/Recommendation.jsx'
 import Portfolio from './Components/Portfolio.jsx'
 import About from './Components/About.jsx'
 import Contact from './Components/Contact.jsx'
-
-import DownloadButton from './Components/DownloadButton.jsx'
+import Footer from './Components/Footer.jsx'
 
 
 import ClickSpark from './ReactBits/ClickSpark/ClickSpark.jsx'
@@ -74,16 +73,14 @@ import useAPIData from './Hooks/useAPIData.js'
         
         <FadeContent blur={true} duration={800} easing="ease-out" initialOpacity={0}>
           <TechStack/>
-          <DownloadButton />
         </FadeContent>
 
          <FadeContent blur={false} duration={800} easing="ease-out" initialOpacity={0}>
           <Portfolio />
           {output ? output[0].Testimonials.trim() && <Recommendation /> : ''}
         </FadeContent>
-         
-
         <Contact/>
+        <Footer />
       </main>
     </ClickSpark>
     

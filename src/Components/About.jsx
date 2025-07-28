@@ -36,7 +36,7 @@ export default function About() {
         <StaticBgLogo/>
 
             </div>
-            <div data-social-logo data-aos="fade-up">
+            <div data-social-logo data-aos="fade" data-aos-duration="500">
                 <SocialNav/>
             </div>
             <hr />

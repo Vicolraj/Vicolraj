@@ -2,30 +2,30 @@ import { FaDownload } from "react-icons/fa";
 
 export default function DownloadButton() {
   return (
-    <div className="download-container">
-      <a href="path/to/your-cv.pdf" download className="download-btn">
-        Download CV
+    <div className={`download-container`}>
+      <a href="https://vicolraj.github.io/Pictures/MyResume.pdf" download className="download-btn">
+        View CV
         <span className="download-icon">
           <FaDownload />
         </span>
       </a>
 
-      <style jsx>{`
+      <style jsx = "true">{`
         .download-container {
           display: flex;
           justify-content: center;
           align-items: center;
+          font: var(--bodyText);
         }
 
         .download-btn {
           position: relative;
-          padding: 1rem 3rem;
+          padding: .6rem 1rem;
           background: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.25);
           border-radius: 50px;
           color: #fff;
-          font-weight: 600;
-          font-size: 1.1rem;
+          font-weight: 500;
           text-transform: uppercase;
           letter-spacing: 1px;
           text-decoration: none;
@@ -71,6 +71,9 @@ export default function DownloadButton() {
           margin-left: 10px;
           font-size: 1.4rem;
           transition: transform 0.3s ease;
+          scale: 0.75;
+          margin-bottom: -2px;
+          transform: translateY(5.5px);
         }
 
         .download-btn:hover .download-icon {

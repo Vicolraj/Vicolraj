@@ -43,7 +43,7 @@ const ContactForm = () => {
       message,
       type
     });
-
+S
     setTimeout(() => {
       setNotification({
         show: false,
@@ -54,7 +54,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className='modSec contactMe'>
+    <section id='contact' className='modSec contact' data-aos="zoom-out">
       <div className="contact-container">
         <div className="window-header">
           <div className="window-buttons">

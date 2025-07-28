@@ -2,6 +2,7 @@ import heroPic from '../assets/vicolrajbg.png'
 import neon from '../assets/neon.gif'
 import './styles/Hero.css'
 import useMousePositon from '../Hooks/useMousePositon.js'
+import DownloadButton from './DownloadButton.jsx'
 
 
 const HeroComponent = () => {
@@ -23,8 +24,9 @@ const HeroComponent = () => {
           BOLD AND MEMORABLE PROJECTS 📌
           <br />
         </pre>
-
-        {/* <button className='hero-btn' data-aos = "fade-up">Download Resume</button> */}
+        <span className='hero-btn' data-aos = "fade-up" data-aos-duration="600">
+          <DownloadButton />
+        </span>
       </div>
       <div data-img-container className='imgcon'
             data-aos = "zoom-out"

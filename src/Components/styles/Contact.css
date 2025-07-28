@@ -12,16 +12,16 @@
     --error: #ff0f0f;
 }
 
-.contactMe{
+.contact{
     margin-top: 40px;
 }
 
-.contactMe *{
+.contact *{
     font: var(--bodyText);
 }
 
 .contact-container {
-    width: 100%;
+    width: 90vw;
     max-width: 500px;
     background: var(--darker-bg);
     border-radius: 16px;
@@ -111,7 +111,7 @@ h2 {
     transform: translateX(-50%);
 }
 
-.contactMe h2::after {
+.contact h2::after {
     content: '';
     position: absolute;
     bottom: -8px;

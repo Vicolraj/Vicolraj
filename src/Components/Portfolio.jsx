@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import './styles/Portfolio.css';
 import useAPIData from '../Hooks/useAPIData.js';
 import ProjectListContainer from './ProjectListContainer.jsx';
@@ -32,7 +32,8 @@ const Portfolio = () => {
     };
 
     return (
-        <section id='projects' className='portfolio' data-aos="fade-up" data-aos-duration="800">
+        <section className='portfolio' data-aos="fade-up" data-aos-duration="800">
+            <span  id='projects'></span>
             <h3 className='heading'>Portfolio</h3>
             <div>A few of my latest website builds</div>
 
