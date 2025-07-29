@@ -42,7 +42,7 @@ export default function Footer() {
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#aboutme">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </motion.div>
@@ -70,16 +70,17 @@ export default function Footer() {
             </a>
           </div>
         </motion.div>
-      </div>
 
-      {/* Copyright */}
+
+        {/* Copyright */}
       <div className="footer-bottom">
         <p>© {currentYear} Vicolraj. All rights reserved.</p>
         <p>Built with React</p>
       </div>
 
-      {/* Original CSS untouched */}
-      <style jsx>{`
+      </div>
+
+      <style jsx="true">{`
      
         .footer {
           background: #121212ff;
@@ -104,7 +105,7 @@ export default function Footer() {
         }
 
         .footer-brand {
-          display: flex;
+          display: grid;
           flex-direction: column;
         }
 
@@ -137,7 +138,12 @@ export default function Footer() {
           gap: 0.5rem;
           cursor: pointer;
           transition: all 0.3s ease;
+          white-spacing: nowrap;
           width: fit-content;
+        }
+
+        .download-btn *{
+          white-spacing: nowrap;
         }
 
         .download-btn:hover {
@@ -194,14 +200,13 @@ export default function Footer() {
         }
 
         .social-icon {
-          font-size: 1.4rem;
+          font-size: 1.1rem;
           color: rgba(255, 255, 255, 0.7);
           transition: all 0.3s ease;
         }
 
         .social-icon:hover {
           color: #b73affff;
-          transform: translateY(-3px);
         }
 
         .footer-bottom {
@@ -218,34 +223,39 @@ export default function Footer() {
           text-align: center;
         }
 
+
         @media (max-width: 768px) {
-          .footer-container {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-          }
-
-          .footer-brand, .footer-nav, .footer-social {
-            align-items: center;
-            text-align: center;
-          }
-
-          .footer-heading::after {
-            left: 50%;
-            transform: translateX(-50%);
-          }
-
-          .nav-links {
-            align-items: center;
-          }
-
-          .download-btn {
-            margin: 0 auto;
-          }
+        .footer {
+          padding: 0px 15px;
+          max-width: 100vw;
         }
 
-        @media (max-width: 480px) {
-          .footer {
-            padding: 3rem 1.5rem 1.5rem;
+        .footer * {
+            font: var(--bodyText);
+            font-size: var(--BodyTextFontSize)
+        }
+
+        .footer-container {
+          max-width: 100vw;
+          width: 100vw;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          padding-bottom: 7rem;   
+          grid-template-columns: repeat(auto-fit, minmax(46%, 1fr));
+        }
+ 
+        .footer-bottom {
+          width: 100vw;
+          min-width: 100vw;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding-top: 1rem;
+          border-top: 1px solid rgba(255, 233, 233, 0.26);
+          margin-bottom: 25px;
+          gap: 0.1rem;
+          font-size: 0.5rem;
           }
         }
      

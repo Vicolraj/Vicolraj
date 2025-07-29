@@ -40,17 +40,17 @@ import useAPIData from './Hooks/useAPIData.js'
     
    
 
-      // document.addEventListener("contextmenu", (event) => {
-      //   event.preventDefault();
-      //   alert("Right-click is disabled!");
-      // });
+      document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        window.location.href = "mailto:vicolraj@gmail.com";
+       });
 
-      // document.addEventListener("keydown", (event) => {
-      //   if (event.key === "PrintScreen" || (event.ctrlKey && event.key === "s")) {
-      //     alert("Screenshots are not allowed!");
-      //     event.preventDefault();
-      //   }
-      // });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "PrintScreen" || (event.ctrlKey && event.key === "s")) {
+        
+          event.preventDefault();
+        }
+      });
 
 
     }, [])
