@@ -17,7 +17,7 @@ export default function TechStack() {
                     <h3>Tech Stack</h3>
                     <p>Here are some of the technologies I work with</p>
                 </div>
-                <div data-aos="fade-left" data-aos-duration="800" className='stackContainer'>
+                <div data-aos="fade-left" data-aos-duration="800" data-aos-offset = "50" className='stackContainer'>
                 {!isLoading ? stacks && stacks.map(
                     item => <SpotlightCard key={item.Stack} className="custom-spotlight-card"
                             spotlightColor="rgba(255, 255, 255, 0.3)">

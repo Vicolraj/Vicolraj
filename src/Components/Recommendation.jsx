@@ -25,17 +25,12 @@ function Recommendation() {
         </ScrollFloat>
         <div className='testimonials'>
          {output ? <Slider
-          item = {output}
-          baseWidth={300}
-          autoplay={true}
-          autoplayDelay={3000}
-          pauseOnHover={true}
-          loop={true}
-          round={false}
+          dataToLoop = {output}
+         
         /> : <i><span className="loader"></span> Loading....</i>}
         </div>
 
-        <p className='instruction'><small>Discover more testimonials by swiping.</small></p>
+        <p className='instruction'><small>Swipe left or right for more</small></p>
       </div>
       
        <hr /> 

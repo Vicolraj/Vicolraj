@@ -24,7 +24,7 @@ const HeroComponent = () => {
           BOLD AND MEMORABLE PROJECTS 📌
           <br />
         </pre>
-        <span className='hero-btn' data-aos = "fade-up" data-aos-duration="600">
+        <span className='hero-btn'>
           <DownloadButton />
         </span>
       </div>

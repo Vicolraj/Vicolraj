@@ -2,6 +2,7 @@ import React from "react"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import "./Slider.css"
+import TiltedCard from '../ReactBits/TiltedCard/TiltedCard.jsx'
 
 const carousel = (slider) => {
   const z = 300
@@ -31,18 +32,34 @@ export default function Slider({dataToLoop}) {
   )
 
   return (
-    <div className="wrapper">
-      <div className="scene">
-        <div className="carousel keen-slider" ref={sliderRef}>
-          <div className="carousel__cell number-slide1 ">1</div>
-          <div className="carousel__cell number-slide2">2</div>
-          <div className="carousel__cell number-slide3">3</div>
-          <div className="carousel__cell number-slide4">4</div>
-          <div className="carousel__cell number-slide5">5</div>
-          <div className="carousel__cell number-slide6">6</div>
-          <div className="carousel__cell number-slide6">7</div>
-        </div>
+  <div className="wrapper">
+    <div className="scene">
+      <div className="carousel keen-slider" ref={sliderRef}>
+        {dataToLoop && dataToLoop.map((item, i) => (
+          <div key={i} className={`carousel__cell number-slide${i + 1}`}>
+            <TiltedCard
+              imageSrc={item.ImgLink}
+              altText=" "
+              captionText=" "
+              containerHeight="200px"
+              containerWidth="240px"
+              imageHeight="50px"
+              imageWidth="50px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              clientName={item.Name}
+              overlayContent={item.Content}
+              occupation={item.Occupation}
+              rating={item.Rating}
+            />
+          </div>
+        ))}
       </div>
     </div>
-  )
+  </div>
+);
+
 }

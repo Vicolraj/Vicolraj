@@ -2,7 +2,7 @@ import { FaDownload } from "react-icons/fa";
 
 export default function DownloadButton() {
   return (
-    <div className={`download-container`}>
+    <div className={`download-container`}  data-aos = "zoom-in" data-aos-delay="600" data-aos-duration="200">
       <a href="https://vicolraj.github.io/Pictures/MyResume.pdf" download className="download-btn">
         View CV
         <span className="download-icon">

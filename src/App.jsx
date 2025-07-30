@@ -45,12 +45,26 @@ import useAPIData from './Hooks/useAPIData.js'
         window.location.href = "mailto:vicolraj@gmail.com";
        });
 
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "PrintScreen" || (event.ctrlKey && event.key === "s")) {
-        
-          event.preventDefault();
-        }
-      });
+  const handleKeyDown = (event) => {
+    const key = event.key.toLowerCase();
+
+    if (
+      key === "f12" ||
+      key === "printscreen" ||
+      (event.ctrlKey && key === "s") ||
+      (event.ctrlKey && event.shiftKey && (key === "i" || key === "j")) ||
+      (event.ctrlKey && key === "u")
+    ) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
+      
+
 
 
     }, [])

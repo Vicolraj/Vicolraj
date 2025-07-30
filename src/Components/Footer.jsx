@@ -157,7 +157,7 @@ export default function Footer() {
         }
 
         .footer-heading {
-          font-size: 1.1rem;
+          font-size: clamp(1.2rem, 10vw, 20px);
           margin-bottom: 1.5rem;
           color: #fff;
           position: relative;
@@ -226,7 +226,7 @@ export default function Footer() {
 
         @media (max-width: 768px) {
         .footer {
-          padding: 0px 15px;
+          padding: 10px 15px;
           max-width: 100vw;
         }
 
@@ -256,6 +256,11 @@ export default function Footer() {
           margin-bottom: 25px;
           gap: 0.1rem;
           font-size: 0.5rem;
+          }
+
+          .footer-logo{
+            font-size: 17px;
+            margin-bottom: -17px;
           }
         }
      

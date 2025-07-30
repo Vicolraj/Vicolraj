@@ -24,8 +24,12 @@ export default function TiltedCard({
   rotateAmplitude = 14,
   showMobileWarning = true,
   showTooltip = true,
+
   overlayContent = null,
   displayOverlayContent = false,
+  clientName = "Anonymouse",
+  occupation = "NULL",
+  rating = 2,
 }) {
   const ref = useRef(null);
 
@@ -77,6 +81,15 @@ export default function TiltedCard({
     rotateFigcaption.set(0);
   }
 
+  function stars(x) {
+    x = parseInt(x);
+    let data = '';
+    for (let i = x; i > 0; i--) {
+      data += '★';
+    }
+    return data;
+  }
+
   return (
     <figure
       ref={ref}
@@ -98,30 +111,43 @@ export default function TiltedCard({
       <motion.div
         className="tilted-card-inner"
         style={{
-          width: imageWidth,
-          height: imageHeight,
+          width: containerWidth,
+          height: containerHeight,
           rotateX,
           rotateY,
           scale,
         }}
       >
-        <motion.img
-          src={imageSrc}
-          alt={altText}
-          className="tilted-card-img"
-          style={{
-            width: imageWidth,
-            height: imageHeight,
-          }}
-        />
+        <motion.div style={{ width: containerWidth }} className="profileContainer">
+          <motion.img
+            src={imageSrc}
+            alt={altText}
+            className="tilted-card-img"
+            style={{
+              width: imageWidth,
+              height: imageHeight,
+            }}
+          />
+
+          <motion.div>
+            <p>{clientName || "Anonymouse"}</p>
+            <small>{occupation || "NULL"}</small>
+          </motion.div>
+        </motion.div>
 
         {displayOverlayContent && overlayContent && (
           <motion.div className="tilted-card-overlay">
-            {overlayContent}
+            {overlayContent || "No Content to load"}
           </motion.div>
         )}
+
+        <motion.div className="rating">
+          {parseInt(rating) > 0 ? stars(rating) : "No rating"}
+        </motion.div>
       </motion.div>
 
+      {/* 
+      Uncomment this if you want to use caption tooltips 
       {showTooltip && (
         <motion.figcaption
           className="tilted-card-caption"
@@ -134,7 +160,8 @@ export default function TiltedCard({
         >
           {captionText}
         </motion.figcaption>
-      )}
+      )} 
+      */}
     </figure>
   );
 }
