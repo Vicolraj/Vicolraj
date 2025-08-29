@@ -12,11 +12,11 @@ I'm a frontend-focused developer with over 3 years of experience specializing in
 ![](https://nirzak-streak-stats.vercel.app/?user=Vicolraj&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Vicolraj&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
+![](https://camo.githubusercontent.com/25241c2d6b4426773b3fcca22259fc5aa7a922a543d78c40c72647d4f37362ca/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d5669636f6c72616a267468656d653d6461726b26686964655f626f726465723d66616c736526696e636c7564655f616c6c5f636f6d6d6974733d66616c736526636f756e745f707269766174653d66616c7365266c61796f75743d636f6d70616374)
+
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=Vicolraj&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=Vicolraj&limit=5&theme=dark&combine_all_yearly_contributions=true)
@@ -24,3 +24,4 @@ I'm a frontend-focused developer with over 3 years of experience specializing in
 ---
 [![](https://visitcount.itsvg.in/api?id=Vicolraj&icon=0&color=0)](https://visitcount.itsvg.in)
 
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
