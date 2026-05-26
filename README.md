@@ -122,46 +122,22 @@ I specialize in building immersive, high-performance web apps using **React.js**
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Vicolraj&theme=github_dark&hide_border=true&include_all_commits=false&count_private=false&bg_color=0d1117&title_color=5dffa0&icon_color=5dffa0&text_color=c9d1d9" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vicolraj&theme=github_dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact&bg_color=0d1117&title_color=5dffa0&text_color=c9d1d9" />
-
-</div>
-
-<div align="center">
-
-<img src="https://nirzak-streak-stats.vercel.app/?user=Vicolraj&theme=github-dark-blue&hide_border=true&background=0d1117&ring=5dffa0&fire=5dffa0&currStreakLabel=5dffa0" />
-
-</div>
-
-<br/>
-
----
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=Vicolraj&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=Vicolraj&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Vicolraj&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=Vicolraj&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
-<div align="center">
 
-![](https://github-profile-trophy.vercel.app/?username=Vicolraj&theme=onestar&no-frame=true&no-bg=true&margin-w=8&column=7)
-
-</div>
-
-<br/>
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=Vicolraj&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
 ---
+[![](https://visitcount.itsvg.in/api?id=Vicolraj&icon=0&color=0)](https://visitcount.itsvg.in)
 
-## 🔝 Top Contributed Repos
-
-<div align="center">
-
-![](https://github-contributor-stats.vercel.app/api?username=Vicolraj&limit=5&theme=dark&combine_all_yearly_contributions=true&bg_color=0d1117&title_color=5dffa0&text_color=c9d1d9&hide_border=true)
-
-</div>
-
-<br/>
+<br>
 
 ---
 
