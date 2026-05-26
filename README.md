@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:5dffa0,100:0d1117&height=200&section=header&text=Victor%20Raj&fontSize=70&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20Developer%20%C2%B7%20Motion%20%26%20Interactivity%20%C2%B7%20Design&descSize=16&descAlignY=60&descColor=5dffa0&animation=fadeIn" />
+<img src="https://media.licdn.com/dms/image/v2/D4E03AQE-P0qwehWRNg/profile-displayphoto-scale_200_200/B4EZ5gQ_PWH0Ac-/0/1779731527395?e=1781136000&v=beta&t=5BbvgD_J-IHLxetz0LpgcSgbEVGsQitDWVX-8tl4tYM" />
 
 </div>
 
