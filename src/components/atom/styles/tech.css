@@ -1,0 +1,44 @@
+/* ═══════════════════════════════════════
+   TECH SECTION
+═══════════════════════════════════════ */
+#tech{
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.tech-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:16px;margin-top:48px;
+}
+.tech-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:16px;padding:24px 20px;
+  transition:all .3s var(--ease-spring);
+  position:relative;overflow:hidden;
+}
+.tech-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--glow-color,rgba(139,92,246,0.05)),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.tech-card:hover{transform:translateY(-4px);border-color:var(--border2);}
+.tech-card:hover::before{opacity:1;}
+.tech-icon{
+  width:52px;height:52px;margin-bottom:12px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.tech-icon img{
+  width:48px;height:48px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 8px rgba(255,255,255,0.06));
+  transition:transform .3s var(--ease-spring),filter .3s;
+}
+.tech-card:hover .tech-icon img{transform:scale(1.08);filter:drop-shadow(0 0 12px rgba(255,255,255,0.12));}
+.tech-name{font-family:var(--ff-head);font-weight:700;font-size:1rem;margin-bottom:4px;}
+.tech-desc{font-size:12px;color:var(--text2);line-height:1.5;}
+.tech-badge{
+  margin-top:12px;display:inline-block;
+  font-family:var(--ff-mono);font-size:10px;
+  padding:2px 8px;border-radius:4px;
+}

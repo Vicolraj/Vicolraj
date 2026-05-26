@@ -1,0 +1,20 @@
+/* ═══════════════════════════════════════
+   ABOUT / CTA
+═══════════════════════════════════════ */
+#contact{
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+}
+.cta-box{
+  max-width:700px;margin:0 auto;text-align:center;
+  padding:80px 40px;
+}
+.cta-box .section-title{font-size:clamp(2.4rem,5vw,3.8rem);}
+.cta-actions{
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  margin-top:40px;flex-wrap:wrap;
+}
+.cta-email{
+  font-family:var(--ff-mono);font-size:13px;color:var(--gold);
+  margin-top:24px;
+}
