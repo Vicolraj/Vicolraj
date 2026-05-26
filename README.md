@@ -60,7 +60,6 @@ I specialize in building immersive, high-performance web apps using **React.js**
 <td valign="top" width="50%">
 
 ### ⚡ Quick Facts
-- 🌍 &nbsp;Based in **Ondo, Nigeria**
 - 🔭 &nbsp;Currently crafting immersive web UIs
 - 🎯 &nbsp;Obsessed with motion + interactivity
 - 🛠️ &nbsp;Proficient in Word & Excel solutions
