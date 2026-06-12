@@ -13,7 +13,6 @@ export default function Nav() {
   return (
     <nav id="nav" className={scrolled ? 'scrolled' : ''}>
       <a href="#" className="nav-logo">
-        <div className="nav-logo-mark"></div>
         Vicolraj
       </a>
       <div className="nav-links">

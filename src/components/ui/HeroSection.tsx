@@ -5,8 +5,7 @@ import lapTop from "../../assets/img/laptop.webp"
 
 export default function HeroSection() {
 
-  // const apiLink = import.meta.env.VITE_API;
-  // const projectsRoute = import.meta.env.VITE_PROJECTS;
+
   return (
     <section className="hero-section">
       <div className="heroBg">

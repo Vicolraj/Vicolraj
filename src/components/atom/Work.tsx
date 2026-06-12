@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PROJECTS, type ProjectItem } from '../../data';
 import './styles/work.css';
 
@@ -18,7 +18,9 @@ const FILTERS = [
 ];
 
 export default function Work() {
+
   const [filter, setFilter] = useState('all');
+
 
   const filtered = filter === 'all' ? PROJECTS : PROJECTS.filter(p => p.category === filter);
 
@@ -61,7 +63,9 @@ function ProjectCard({ item, index }: { item: ProjectItem; index: number }) {
       style={{ transitionDelay: `${index * 0.05}s` }}
     >
       <div className="card-canvas-wrap" style={{ background: `${item.accentColor}08` }}>
-        <div className="card-placeholder">{item.placeholder}</div>
+        <div className="card-placeholder">
+          <img src={item.placeholder} alt={item.title} />
+        </div>
         <div className="card-overlay">
           {item.link && (
             <a href={item.link} target="_blank" rel="noreferrer" className="overlay-btn overlay-btn-primary">

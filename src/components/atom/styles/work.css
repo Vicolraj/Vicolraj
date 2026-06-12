@@ -92,6 +92,10 @@
   user-select:none;
 }
 
+.card-placeholder > img{
+  width: 100%;
+}
+
 /* Hover overlay */
 .card-overlay{
   position:absolute;inset:0;
