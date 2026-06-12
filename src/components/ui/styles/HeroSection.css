@@ -54,6 +54,7 @@
   max-width:420px;
   margin-bottom:40px;
   font-weight:300;
+  min-height: 120px;
 }
 
 .hero-actions{

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { PROJECTS, type ProjectItem } from '../../data';
 import './styles/work.css';
 
