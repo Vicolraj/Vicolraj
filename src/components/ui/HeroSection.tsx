@@ -1,8 +1,8 @@
 import "./styles/HeroSection.css"
-// @ts-ignore
-import Silk from "../animation/Silk/Silk"
+import { GridScan } from "../animation/GridScan/GridScan"
 import SplitText from "../animation/SplitText/SplitText"
 import TextType from "../animation/TextType/TextType"
+import {motion} from "framer-motion"
 
 import lapTop from "../../assets/img/laptop.webp"
 
@@ -12,10 +12,29 @@ export default function HeroSection() {
   return (
     <section className="hero-section">
       <div className="heroBg">
-        <Silk speed={4} scale={1.2} color="#ec6b30" noiseIntensity={0.4} />
+          <GridScan
+               sensitivity={0.55}
+                lineThickness={1}
+                linesColor="#2F293A"
+                gridScale={0.1}
+                scanColor="#ffcc9fda"
+                scanOpacity={0.4}
+                enablePost
+                bloomIntensity={0.6}
+                chromaticAberration={0.002}
+                noiseIntensity={0.025}
+                lineJitter={0.1}
+                scanGlow={0.5}
+                scanSoftness={2}
+                enableWebcam
+                showPreview={false}
+
+          />
+        
       </div>
 
       <div className="hero-left">
+        
         <h1 className="hero-title">
           <SplitText
             text="Victor"
@@ -78,7 +97,7 @@ export default function HeroSection() {
 
 
 
-        <p className="hero-sub">
+        <div className="hero-sub">
           <TextType 
             text={"I build things for the web from Backends to Frontends Apps, from animated components to production-grade cloud infrastructure. 3+ years shipping apps people actually use."}
             typingSpeed={7}
@@ -93,12 +112,16 @@ export default function HeroSection() {
             // variableSpeedMax={120}
             cursorBlinkDuration={0.5}
           />
-        </p>
+        </div>
 
-        <div className="hero-actions">
+        <motion.div className="hero-actions"
+          initial = {{y: 20, opacity: 0}}
+          animate = {{y: 0, opacity: 1, transition: {type: "spring", duration: 3}}}
+
+        >
           <a href="#work" className="btn btn-primary">See my work ↓</a>
           <a href="#contact" className="btn btn-ghost">Get in touch</a>
-        </div>
+        </motion.div>
 
         <div className="hero-stats">
           <div className="stat-item">

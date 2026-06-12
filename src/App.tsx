@@ -10,6 +10,8 @@ import Footer from './components/atom/Footer'
 import { useCustomCursor } from './hooks/useCustomCursor'
 import { useScrollReveal } from './hooks/useScrollReveal'
 import { useRef } from 'react'
+import {motion} from  "framer-motion"
+
 
 function App() {
   useCustomCursor();
@@ -17,7 +19,7 @@ function App() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section ref={containerRef}>
+    <motion.section initial = {{opacity: 0}} animate = {{opacity:1 }} ref={containerRef}>
       <Nav />
       <HeroSection />
       <ScrollVideoSection sectionRef={containerRef} />
@@ -26,7 +28,8 @@ function App() {
       <TechStack />
       <Contact />
       <Footer />
-    </section>
+       
+    </motion.section>
   )
 }
 

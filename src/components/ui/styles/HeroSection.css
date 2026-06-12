@@ -126,11 +126,13 @@
 
 /* Silk background overlay — subtle */
 .heroBg{
-  position:absolute;inset:0;
-  opacity:0.06;
-  z-index:0;
+  position:absolute;
+  inset:0;
+  opacity:0.25;
+  z-index:1;
   pointer-events:none;
 }
+
 .heroBg canvas{width:100% !important;height:100% !important;}
 
 @media(max-width:900px){
