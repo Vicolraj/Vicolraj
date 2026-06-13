@@ -28,7 +28,7 @@ function App() {
       <TechStack />
       <Contact />
       <Footer />
-       
+       {/* This is a comment  */}
     </motion.section>
   )
 }
