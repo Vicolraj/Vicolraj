@@ -6,7 +6,7 @@
   background:var(--bg);
   position:relative;
   overflow:hidden;
-  border-top:1px solid var(--border);
+  border-top:var(--brutal-border);
 }
 
 .contact-inner{
@@ -24,7 +24,9 @@
   margin-bottom:28px;
 }
 .contact-title em{
-  font-style:italic;font-weight:300;color:var(--rust);
+  font-style:normal;font-weight:900;color:#fff;
+  background:var(--border);padding:0 8px;
+  display:inline-block;transform:rotate(-2deg);
 }
 
 .contact-body{

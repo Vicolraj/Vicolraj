@@ -77,7 +77,7 @@ export const PROJECTS: ProjectItem[] = [
     link: "https://smoothie-juicy.vercel.app/",
     github: "https://github.com/Vicolraj/SmoothieJuicy",
     accentColor: "#00d4aa"
-  }
+  },
 ];
 
 export const TECH_STACK = [

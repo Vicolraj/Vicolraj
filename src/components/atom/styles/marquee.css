@@ -3,10 +3,10 @@
 ═══════════════════════════════════════ */
 .marquee-outer{
   overflow:hidden;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
+  border-top:var(--brutal-border);
+  border-bottom:var(--brutal-border);
   padding:14px 0;
-  background:var(--bg2);
+  background:var(--bg);
 }
 
 .marquee-track{
@@ -16,10 +16,11 @@
 }
 
 .marquee-item{
-  font-family:var(--ff-mono);
-  font-size:11px;
-  color:var(--text3);
-  letter-spacing:1.5px;
+  font-family:var(--ff-display);
+  font-size:32px;
+  font-weight:900;
+  color:var(--text);
+  letter-spacing:-1px;
   text-transform:uppercase;
   padding:0 18px;
   white-space:nowrap;
