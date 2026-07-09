@@ -68,7 +68,7 @@ nav.scrolled{
 .nav-toggle.open .hamburger::after{transform:rotate(-45deg);top:0}
 
 .nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.35);z-index:95}
-.nav-cancel{display:none}
+.nav-links .nav-cancel{display:none}
 
 
 @media(max-width:600px){
@@ -84,7 +84,7 @@ nav.scrolled{
   .nav-links.open{transform:translateX(0)}
   .nav-links a{font-size:16px}
   .nav-cta{width:100%;text-align:left}
-  .nav-cancel{
-    display:block;position:absolute;top:18px;right:18px;border:0;background:transparent;font-size:26px;line-height:1;cursor:pointer;color:var(--text);
+  .nav-links.open .nav-cancel{
+    display:block;position:absolute;top:18px;right:18px;border:0;background:transparent;font-size:26px;line-height:1;cursor:pointer;color:var(--text);z-index:102;
   }
 }   
