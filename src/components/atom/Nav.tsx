@@ -17,7 +17,10 @@ export default function Nav() {
   }, [open]);
 
   return (
-    <nav id="nav" className={scrolled ? 'scrolled' : ''}>
+    <>
+      {open && <div className="nav-backdrop" onClick={() => setOpen(false)} />}
+
+      <nav id="nav" className={scrolled ? 'scrolled' : ''}>
       <a href="#" className="nav-logo">
         Vicolraj
       </a>
@@ -32,11 +35,13 @@ export default function Nav() {
       </button>
 
       <div className={`nav-links ${open ? 'open' : ''}`}>
+        <button className="nav-cancel" onClick={() => setOpen(false)} aria-label="Close menu">×</button>
         <a href="#work" onClick={() => setOpen(false)}>Work</a>
         <a href="#tech" onClick={() => setOpen(false)}>Stack</a>
         <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
         <button className="nav-cta" onClick={() => setOpen(false)}>Hire Me →</button>
       </div>
-    </nav>
+      </nav>
+    </>
   );
 }
