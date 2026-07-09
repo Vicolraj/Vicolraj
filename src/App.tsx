@@ -3,7 +3,7 @@ import Nav from './components/atom/Nav'
 import HeroSection from './components/ui/HeroSection'
 import Marquee from './components/atom/Marquee'
 import Work from './components/atom/Work'
-import ScrollVideoSection from './components/atom/ScrollVideoSection'
+// import ScrollVideoSection from './components/atom/ScrollVideoSection'
 import TechStack from './components/atom/TechStack'
 import Contact from './components/atom/Contact'
 import Footer from './components/atom/Footer'
@@ -22,7 +22,7 @@ function App() {
     <motion.section initial = {{opacity: 0}} animate = {{opacity:1 }} ref={containerRef}>
       <Nav />
       <HeroSection />
-      <ScrollVideoSection sectionRef={containerRef} />
+      {/* <ScrollVideoSection sectionRef={containerRef} /> */}
       <Marquee />
       <Work />
       <TechStack />

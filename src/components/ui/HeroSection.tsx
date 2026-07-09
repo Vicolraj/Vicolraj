@@ -18,7 +18,7 @@ export default function HeroSection() {
                 linesColor="#2F293A"
                 gridScale={0.1}
                 scanColor="#ffcc9fda"
-                scanOpacity={0.4}
+                scanOpacity={0.1}
                 enablePost
                 bloomIntensity={0.6}
                 chromaticAberration={0.002}
