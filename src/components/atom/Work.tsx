@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { PROJECTS, type ProjectItem } from '../../data';
 import './styles/work.css';
 
@@ -10,19 +10,20 @@ const tagClasses: Record<string, string> = {
   purple: 'tag-purple',
 };
 
-const FILTERS = [
-  { key: 'all', label: 'All' },
-  { key: 'website', label: 'Websites' },
-  { key: 'animation', label: 'Animation' },
-  { key: 'component', label: 'Components' },
-];
+// const FILTERS = [
+//   { key: 'all', label: 'All' },
+//   { key: 'website', label: 'Websites' },
+//   { key: 'animation', label: 'Animation' },
+//   { key: 'component', label: 'Components' },
+// ];
 
 export default function Work() {
 
-  const [filter, setFilter] = useState('all');
+  // const [filter, setFilter] = useState('all');
 
 
-  const filtered = filter === 'all' ? PROJECTS : PROJECTS.filter(p => p.category === filter);
+  // const filtered = filter === 'all' ? PROJECTS : PROJECTS.filter(p => p.category === filter);
+  const filtered = PROJECTS;
 
   return (
     <section id="work">
@@ -34,7 +35,7 @@ export default function Work() {
             <em>built.</em>
           </h2>
         </div>
-        <div className="filter-pills">
+        {/*<div className="filter-pills">
           {FILTERS.map(f => (
             <button
               key={f.key}
@@ -44,7 +45,7 @@ export default function Work() {
               {f.label}
             </button>
           ))}
-        </div>
+        </div>*/}
       </div>
 
       <div className="catalog">
